@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- id="tv"라고 해도됨 -->
+	<bean name="tv" class="net.developia.spring01.di101.SamsungTV"
+	      p:speaker="speaker">
+		<!--  <property name="speaker" ref="speaker"/>-->
+		<!--  프로퍼티는 셋스피커의 이름을 가져옴. -->
+	</bean>
+	
+	<!-- 
+	import net.developia.spring01.di101.SamsungTV;
+	SamsungTV tv = new SamsungTV();
+	
+	<bean id=  scope= class=
+	 -->
+
+	
+	<bean name="speaker" class="net.developia.spring01.di101.HaramSpeaker"/>
+
+</beans>

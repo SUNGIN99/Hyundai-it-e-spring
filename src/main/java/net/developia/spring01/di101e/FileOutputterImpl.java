@@ -1,0 +1,26 @@
+package net.developia.spring01.di101e;
+
+import java.io.FileWriter;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+public class FileOutputterImpl implements FileOutputter{
+
+	private String fileName;
+	
+//	public void setFileName(String fileName) {
+//		this.fileName = fileName;
+//	}
+	
+	
+	@Override
+	public void output(String msg) throws Exception {
+		FileWriter fw = new FileWriter(fileName);
+		fw.write(msg);
+		fw.flush();
+		fw.close();
+		
+	}
+	
+}

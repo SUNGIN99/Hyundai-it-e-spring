@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!--  net이라고만 해도 되지만, 모든 패키지를 확인하기 때문에 시간 오래걸림. 서로간의 컴포넌트 스캔이 또 일어날 수 있기 때문에,경로를 안겹치게하는게 좋음 -->
+	<context:component-scan base-package="net.developia.spring01.di202">
+	<!--  또 다른 경로르 추가하거나, 특정 경로를 제외하는 경우도 있음. 근데 이건 지저분함 => 루트만 잡아주고 그 루트가 안겹치는게 제일 좋음-->
+	
+	</context:component-scan>
+
+</beans>
