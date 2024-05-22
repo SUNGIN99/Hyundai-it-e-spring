@@ -15,8 +15,12 @@
 	 
 	 
 	 <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+	 	<!-- 
 	 	<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
 	 	<property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521/XEPDB1"></property>
+	 	 -->
+	 	<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
+	 	<property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@localhost:1521/XEPDB1"></property>
 	 	<property name="username" value="SCOTT1"></property>
 	 	<property name="password" value="TIGER"></property>
 	 </bean>
